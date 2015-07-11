@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h1>{{ note.title }}</h1>
+  <small>{{ note.user.name }}</small>
+</div>
+  <p>
+      {{note.description}}
+  </p>
+  <p>
+      {{note.content}}
+  </p>
+  <p>
+    <span class="label label-info">{{note.category.name}}</span>
+  </p>
+
+<a ng-href="#/notes/{{note.id}}/edit" class="btn btn-default">Edit Note</a>
+<a href="" id="delete" class="btn btn-danger" ng-click="deleteNote(note)">Delete</a>

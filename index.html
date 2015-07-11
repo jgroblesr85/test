@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="NoteWrangler">
+  <head>
+    <meta charset="utf-8">
+    <title>Note Wrangler</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.css" />
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="#/">NoteWrangler</a>
+          </div>
+        </div>        
+        <nw-page-nav></nw-page-nav>
+      </div>
+    </nav>
+
+
+    <div ng-view class="container-fluid">
+
+    </div>
+  </body>
+  <!--vendor-->
+  <script src="assets/js/vendor/jquery-1.11.3.min.js" charset="utf-8"></script>
+  <script src="assets/js/vendor/angular.min.js" charset="utf-8"></script>
+  <script src="assets/js/vendor/angular-route.min.js" charset="utf-8"></script>
+  <script src="assets/js/vendor/angular-resource.min.js" charset="utf-8"></script>
+  <script src="assets/js/vendor/bootstrap.min.js" charset="utf-8"></script>
+  <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js" charset="utf-8"></script>
+  <!--<script src="assets/js/vendor/ngGravatar.js" charset="utf-8"></script>-->
+
+
+  <!-- App -->
+  <script src="assets/js/app.js" charset="utf-8"></script>
+  <script src="assets/js/routes.js" charset="utf-8"></script>
+  <!-- Directives -->
+  <script src="assets/js/directives/nwPageNav.js" charset="utf-8"></script>
+  <!--<script src="assets/js/directives/nwCategorySelector.js" charset="utf-8"></script>-->
+  <!--<script src="assets/js/directives/title.js" charset="utf-8"></script>-->
+  <!-- Controller -->
+  <script src="assets/js/controllers/notesIndexController.js" charset="utf-8"></script>
+  <script src="assets/js/controllers/notesCreateController.js" charset="utf-8"></script>
+  <script src="assets/js/controllers/notesShowController.js" charset="utf-8"></script>
+  <script src="assets/js/controllers/notesEditController.js" charset="utf-8"></script>
+  <script src="assets/js/controllers/usersIndexController.js" charset="utf-8"></script>
+  <script src="assets/js/controllers/usersShowController.js" charset="utf-8"></script>
+
+  <!-- Services -->
+  <script src="assets/js/services/note.js" charset="utf-8"></script>
+  <script src="assets/js/services/user.js" charset="utf-8"></script>
+  <script src="assets/js/services/category.js" charset="utf-8"></script>
+  <!-- Filter -->
+  <!--script src="assets/js/filters/categoryFilter.js" charset="utf-8"></script>-->
+</html>

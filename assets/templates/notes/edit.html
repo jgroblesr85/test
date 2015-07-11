@@ -1,0 +1,37 @@
+<h1>{{ note.title}}</h1>
+<form>
+    <input type="hidden" id="id" name="id" ng-model="note.id">
+
+    <fieldset class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" type="text" id="title" name="title" ng-model="note.title">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="category">Category</label>
+      <select
+              ng-model="note.category_id"
+              ng-options="category.id as category.name for category in categories">
+      </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="user">User</label>
+      <select ng-options="user.id as user.name for user in users"
+              ng-model="note.user_id">
+      </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="description">Description</label>
+      <input class="form-control" type="text" id="description" name="description" ng-model="note.description">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="content">Content</label>
+      <textarea class="form-control" type="text" id="content" name="content" ng-model="note.content">
+      </textarea>
+    </fieldset>
+
+    <input type="submit" value="{{isSubmitting ? 'saving...' : 'Save' }}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting" >
+</form>
